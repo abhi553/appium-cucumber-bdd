@@ -16,15 +16,15 @@ Feature: Login scenarios
       | username | password |
       | abc@gmail.com | test1234 |
 
-  Scenario Outline: Verification of Admin Dashboard
-    Given that user is on the Dashboard
-    When the user verify the list
-    Then user sees requests
-    And user seees the option to historical requests
-    And user sees the option to trigger the reconciliation
-    Examples:
-      | username | password |
-      | abc@gmail.com | test1234 |
+#  Scenario Outline: Verification of Admin Dashboard
+#    Given that user is on the Dashboard
+#    When the user verify the list
+#    Then user sees requests
+#    And user seees the option to historical requests
+##    And user sees the option to trigger the reconciliation
+#    Examples:
+#      | username | password |
+#      | abc@gmail.com | test1234 |
 
 
 

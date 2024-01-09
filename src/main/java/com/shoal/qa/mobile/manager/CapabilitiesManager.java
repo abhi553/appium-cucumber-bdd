@@ -32,7 +32,7 @@ public class CapabilitiesManager {
                     caps.setCapability("browserVersion", "");
                     //String androidAppUrl = getClass().getResource(props.getProperty("androidAppLocation")).getFile();
                     String androidAppUrl = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test"
-                            + File.separator + "resources" + File.separator + "apps" + File.separator + "Android.SauceLabs.Mobile.Sample.app.2.7.1.apk";
+                            + File.separator + "resources" + File.separator + "apps" + File.separator + "shoal-admin.apk";
                     utils.log().info("appUrl is" + androidAppUrl);
                     caps.setCapability("app", androidAppUrl);
                     break;
@@ -40,7 +40,7 @@ public class CapabilitiesManager {
                     caps.setCapability("automationName", props.getProperty("iOSAutomationName"));
                     //String iOSAppUrl = getClass().getResource(props.getProperty("iOSAppLocation")).getFile();
                     String iOSAppUrl = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test"
-                            + File.separator + "resources" + File.separator + "apps" + File.separator + "SwagLabsMobileApp.app";
+                            + File.separator + "resources" + File.separator + "apps" + File.separator + "shoal-admin.ipa";
                     utils.log().info("appUrl is" + iOSAppUrl);
                     caps.setCapability("bundleId", props.getProperty("iOSBundleId"));
                     caps.setCapability("wdaLocalPort", params.getWdaLocalPort());
