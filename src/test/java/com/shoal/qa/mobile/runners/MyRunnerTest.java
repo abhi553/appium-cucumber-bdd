@@ -38,7 +38,7 @@ public class MyRunnerTest {
         ThreadContext.put("ROUTINGKEY", params.getPlatformName() + "_"
                 + params.getDeviceName());
 
-        new ServerManager().startServer();
+        //new ServerManager().startServer();
         new DriverManager().initializeDriver();
     }
 

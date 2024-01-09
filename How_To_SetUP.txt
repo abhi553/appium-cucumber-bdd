@@ -81,7 +81,7 @@ https://cucumber.io/docs/gherkin/step-organization/
 
 10. Copy config.properties and log4j2.xml
 =========================================
-log4j2 configurations: 
+log4j2 configurations: https://github.com/omprakashchavan01/log4j2_properties
 
 11. Copy TestUtils class to src/main/java/com/qa/utils
 ======================================================

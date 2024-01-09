@@ -6,14 +6,18 @@ import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServerHasNotBeenStartedLocallyException;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.service.local.flags.GeneralServerFlag;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.HashMap;
 
 public class ServerManager {
     private static final ThreadLocal<AppiumDriverLocalService> server = new ThreadLocal<>();
     CommonUtils utils = new CommonUtils();
-
+    static RemoteWebDriver driver;
     public AppiumDriverLocalService getServer(){
         return server.get();
     }
@@ -32,7 +36,15 @@ public class ServerManager {
     }
 
     public AppiumDriverLocalService WindowsGetAppiumService() {
+
         GlobalParams params = new GlobalParams();
+
+        try {
+            driver = new RemoteWebDriver(new URL("http://192.168.1.182:4723/wd/hub"),
+                    driver.getCapabilities());
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        }
         return AppiumDriverLocalService.buildService(new AppiumServiceBuilder()
                 .usingAnyFreePort()
                 .withArgument(GeneralServerFlag.SESSION_OVERRIDE)

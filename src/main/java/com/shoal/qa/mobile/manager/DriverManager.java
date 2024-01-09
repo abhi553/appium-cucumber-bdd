@@ -8,6 +8,8 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 public class DriverManager {
     private static final ThreadLocal<AppiumDriver> driver = new ThreadLocal<>();
@@ -29,9 +31,9 @@ public class DriverManager {
             utils.log().info("initializing Appium driver");
             driver = switch (params.getPlatformName()) {
                 case "Android" ->
-                        new AndroidDriver(new ServerManager().getServer().getUrl(), new CapabilitiesManager().getCaps());
+                        new AndroidDriver(new URL("http://192.168.1.182:4723/wd/hub"), new CapabilitiesManager().getCaps());
                 case "iOS" ->
-                        new IOSDriver(new ServerManager().getServer().getUrl(), new CapabilitiesManager().getCaps());
+                        new IOSDriver(new URL("http://192.168.1.182:4723/wd/hub"), new CapabilitiesManager().getCaps());
                 default -> driver;
             };
             if (driver == null) {

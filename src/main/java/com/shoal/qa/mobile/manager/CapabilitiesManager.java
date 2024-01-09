@@ -28,8 +28,8 @@ public class CapabilitiesManager {
                     caps.setCapability("automationName", props.getProperty("androidAutomationName"));
                     caps.setCapability("appPackage", props.getProperty("androidAppPackage"));
                     caps.setCapability("appActivity", props.getProperty("androidAppActivity"));
-                    caps.setCapability("systemPort", params.getSystemPort());
-                    caps.setCapability("chromeDriverPort", params.getChromeDriverPort());
+                    //caps.setCapability("systemPort", params.getSystemPort());
+                    caps.setCapability("browserVersion", "");
                     //String androidAppUrl = getClass().getResource(props.getProperty("androidAppLocation")).getFile();
                     String androidAppUrl = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test"
                             + File.separator + "resources" + File.separator + "apps" + File.separator + "Android.SauceLabs.Mobile.Sample.app.2.7.1.apk";

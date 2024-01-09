@@ -46,7 +46,7 @@ public class BaseRunner {
                 break;
         }
 
-        new ServerManager().startServer();
+      //  new ServerManager().startServer();
         new DriverManager().initializeDriver();
 
         setRunner(new TestNGCucumberRunner(this.getClass()));

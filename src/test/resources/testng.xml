@@ -3,22 +3,24 @@
 <suite name="Suite" parallel="tests">
 	<test name="Pixel5">
 		<parameter name="platformName" value="Android" />
-		<parameter name="udid" value="emulator-5554" />
-		<parameter name="deviceName" value="pixel_5" />
-		<parameter name="systemPort" value="10000" />
-		<parameter name="chromeDriverPort" value="11000" />
+		<parameter name="udid" value="R5CR80F324L" />
+		<parameter name="deviceName" value="SamaungS21" />
+		<parameter name="systemPort" value="4723" />
+		<parameter name="autoLaunch" value="true"/>
+		<!--<parameter name="browserVersion" value="" />-->
+		<parameter name="chromeDriverPort" value="11001" />
 		<classes>
-			<class name="com.shoal.qa.mobile.runners.MyPixel3TestNGRunnerTest"/>
+			<class name="com.shoal.qa.mobile.runners.MyPixel3TestNGRunnerTest"></class>
 		</classes>
 	</test>
-	<test name="Pixel4">
+	<!--<test name="Pixel4">
 		<parameter name="platformName" value="Android" />
 		<parameter name="udid" value="emulator-5556" />
 		<parameter name="deviceName" value="Pixel_4" />
-		<parameter name="systemPort" value="10001" />
+		<parameter name="systemPort" value="4723" />
 		<parameter name="chromeDriverPort" value="11001" />
 		<classes>
-			<class name="com.shoal.qa.mobile.runners.MyPixel2XLTestNGRunnerTest"/>
+			<class name="com.shoal.qa.mobile.runners.MyPixel2XLTestNGTestRunner"/>
 		</classes>
-	</test>
+	</test>-->
 </suite> <!-- Suite -->

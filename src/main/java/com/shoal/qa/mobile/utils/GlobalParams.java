@@ -5,7 +5,7 @@ public class GlobalParams {
     private static ThreadLocal<String> udid = new ThreadLocal<String>();
     private static ThreadLocal<String> deviceName = new ThreadLocal<String>();
     private static ThreadLocal<String> systemPort = new ThreadLocal<String>();
-    private static ThreadLocal<String> chromeDriverPort = new ThreadLocal<String>();
+    private static ThreadLocal<String> browserVersion = new ThreadLocal<String>();
     private static ThreadLocal<String> wdaLocalPort = new ThreadLocal<String>();
     private static ThreadLocal<String> webkitDebugProxyPort = new ThreadLocal<String>();
 
@@ -41,12 +41,12 @@ public class GlobalParams {
         systemPort.set(systemPort2);
     }
 
-    public String getChromeDriverPort() {
-        return chromeDriverPort.get();
+    public String getbrowserVersion() {
+        return browserVersion.get();
     }
 
     public void setChromeDriverPort(String chromeDriverPort2) {
-        chromeDriverPort.set(chromeDriverPort2);
+        browserVersion.set(chromeDriverPort2);
     }
 
     public String getWdaLocalPort() {
@@ -74,11 +74,11 @@ public class GlobalParams {
         switch(params.getPlatformName()){
             case "Android":
                 params.setSystemPort(System.getProperty("systemPort", "10000"));
-                params.setChromeDriverPort(System.getProperty("chromeDriverPort", "11000"));
+               params.setChromeDriverPort(System.getProperty("browserVersion", ""));
                 break;
             case "iOS":
                 params.setWdaLocalPort(System.getProperty("wdaLocalPort", "10001"));
-                params.setWebkitDebugProxyPort(System.getProperty("webkitDebugProxyPort", "11001"));
+                //params.setWebkitDebugProxyPort(System.getProperty("webkitDebugProxyPort", "11001"));
                 break;
             default:
                 throw new IllegalStateException("Invalid Platform Name!");
