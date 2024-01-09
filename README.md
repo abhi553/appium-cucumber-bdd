@@ -32,7 +32,7 @@ Framework implements below best practices
 - Abstraction layer for static text
 - Supports iOS and Android
 - Demonstrates how to define UI elements that are common across pages (e.g. menu bar, side bar, etc.)
-- How to recover from test failure/ how to write fail safe test cases
+- How to recover from test failure/ how to write fail safe test case
 - Scrolling for both Android and iOS (using touchaction, uiScrollable, mobile:scroll)
 - Demonstrates how to effectively capture Screenshots/Videos
 - Supports parallel execution using TestNG
